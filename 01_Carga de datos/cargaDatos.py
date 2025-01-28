@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-fichero = 'python-workspace\DataScient_01-Python\csv_practicos\precios_coches.csv'
+fichero = 'csv_practicos/precios_coches.csv'
 
 datos = pd.read_csv(fichero)
 
@@ -18,7 +18,7 @@ datos.columns = titulos_cabecera
 print(datos.head(5))
 
 #Export datos
-datos.to_csv('csv_practicos/precios_cochesCopia.csv')
+datos.to_csv('csv_practicos/precios_cochesCopia2.csv')
 
 #Otros formatos de archivos
 #datos.to_json()
