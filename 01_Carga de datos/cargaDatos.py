@@ -18,7 +18,7 @@ datos.columns = titulos_cabecera
 print(datos.head(5))
 
 #Export datos
-datos.to_csv('csv_practicos/precios_cochesCopia2.csv')
+datos.to_csv('csv_practicos/precios_cochesCopia.csv')
 
 #Otros formatos de archivos
 #datos.to_json()
