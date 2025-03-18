@@ -39,9 +39,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 modelo = DecisionTreeClassifier()
 modelo.fit(X_train, y_train)
 
-# joblib.dump(modelo, 'python-workspace\\DataScient_01-Python\\modelos_entrenados\\arbol_de_decision.pkl')
+# joblib.dump(modelo, 'modelos_entrenados/arbol_de_decision.pkl')
 
-modelo_cargado = joblib.load ('python-workspace\\DataScient_01-Python\\modelos_entrenados\\arbol_de_decision.pkl')
+modelo_cargado = joblib.load ('modelos_entrenados/arbol_de_decision.pkl')
 
 y_predicciones = modelo_cargado.predict(X_test)
 
@@ -60,4 +60,10 @@ clasificacion = classification_report(y_test, y_predicciones)
 print('Clasificación:')
 print(clasificacion)
 
+plt.figure(figsize=(8,6))
+plt.scatter(X_test_con_prediccion['valor real'], X_test_con_prediccion['prediccion'])
+plt.xlabel('Valor Real')
+plt.ylabel('Predicción')
+plt.title('Valores reales vs predicciones')
+plt.show()
 
