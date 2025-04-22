@@ -23,11 +23,7 @@ print(confusion_matrix(y_test, y_pred))
 for k in range(1,10):
     knn = KNeighborsClassifier(n_neighbors=k)
     knn.fit(X_train, y_train)
-    y_pred = knn.predict(X_test)
-    print(f"Predicción para {k} vecinos es: {y_pred}")
-    print(f"El valor de y_tests es       : {y_test}")
-    print(f"El valor de X_tests es       : {X_test}")
-    #print(f"k={k}, Accuracy: {knn.score(y_test, y_pred)}")
+    print(f"k={k}, Accuracy: {knn.score(X_test, y_test)}")
 
 
 
