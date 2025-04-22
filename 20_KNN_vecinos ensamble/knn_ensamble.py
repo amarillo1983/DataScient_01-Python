@@ -43,7 +43,7 @@ mejor_modelo = knn_modelo if knn_accuracy > rf_accuracy else rf_modelo
 joblib.dump(mejor_modelo, "modelos_entrenados/mejor_modelo.pkl")
 
 #Cargar modelo
-modelo_cargado = joblib.load("mejor_modelo.pkl")
+modelo_cargado = joblib.load("modelos_entrenados/mejor_modelo.pkl")
 pred = modelo_cargado.predict(X_test_escalado)
 
 comparacion = pd.DataFrame({'Real': y_test, 'Predicción': pred})
